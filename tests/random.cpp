@@ -106,7 +106,7 @@ int main(int argc, char* argv[]) {
                            compulsory, false, num_caches);
    }
 
-   array<AccessData, 2000> access_buffer;
+   AccessData access_buffer[2000] = {};
    default_random_engine engine(0);
    uniform_int_distribution<unsigned int> tid_generator(0, num_threads);
    uniform_int_distribution<unsigned int> rw_generator(0, 1);

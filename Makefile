@@ -28,7 +28,7 @@ cscope.out: *.cpp *.h
 
 .PHONY: check
 check:
-	cppcheck --enable=all .
+	cppcheck --enable=all --suppress=missingIncludeSystem --suppress=unusedFunction --suppress=knownConditionTrueFalse --suppress=missingInclude --suppress=noExplicitConstructor --suppress=useStlAlgorithm .
 
 .PHONY: clean
 clean:

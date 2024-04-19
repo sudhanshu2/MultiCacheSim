@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.flex": "lex",
+        "array": "cpp"
+    }
+}

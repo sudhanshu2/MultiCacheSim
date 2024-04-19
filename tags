@@ -1,0 +1,85 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AccessData	tests/random.cpp	/^struct AccessData {$/;"	s	file:
+AccessType	misc.h	/^enum class AccessType {Read, Write, Prefetch};$/;"	c
+AdjPrefetch	prefetch.h	/^class AdjPrefetch : public Prefetch {$/;"	c
+CATCH_CONFIG_MAIN	tests/unit.cpp	28;"	d	file:
+Cache	cache.cpp	/^Cache::Cache(unsigned int num_lines, unsigned int assoc) : maxSetSize(assoc)$/;"	f	class:Cache
+Cache	cache.h	/^class Cache {$/;"	c
+CacheLine	misc.h	/^   CacheLine(uint64_t tag = 0, CacheState state = CacheState::Invalid) : $/;"	f	struct:CacheLine
+CacheLine	misc.h	/^struct CacheLine{$/;"	s
+CacheState	misc.h	/^enum class CacheState {Modified, Owned, Exclusive, Shared, Invalid};$/;"	c
+Exclusive	misc.h	/^enum class CacheState {Modified, Owned, Exclusive, Shared, Invalid};$/;"	m	class:CacheState
+Modified	misc.h	/^enum class CacheState {Modified, Owned, Exclusive, Shared, Invalid};$/;"	m	class:CacheState
+MultiCacheSystem	system.cpp	/^MultiCacheSystem::MultiCacheSystem(std::vector<unsigned int>& tid_to_domain, $/;"	f	class:MultiCacheSystem
+MultiCacheSystem	system.h	/^class MultiCacheSystem : public System {$/;"	c
+Owned	misc.h	/^enum class CacheState {Modified, Owned, Exclusive, Shared, Invalid};$/;"	m	class:CacheState
+PAGE_SIZE_4KB	misc.h	28;"	d
+Prefetch	prefetch.h	/^class Prefetch {$/;"	c
+Read	misc.h	/^enum class AccessType {Read, Write, Prefetch};$/;"	m	class:AccessType
+SeqPrefetch	prefetch.h	/^class SeqPrefetch : public Prefetch {$/;"	c
+Shared	misc.h	/^enum class CacheState {Modified, Owned, Exclusive, Shared, Invalid};$/;"	m	class:CacheState
+SingleCacheSystem	system.cpp	/^SingleCacheSystem::SingleCacheSystem( $/;"	f	class:SingleCacheSystem
+SingleCacheSystem	system.h	/^class SingleCacheSystem : public System {$/;"	c
+System	system.cpp	/^System::System($/;"	f	class:System
+System	system.h	/^class System {$/;"	c
+SystemStats	system.h	/^struct SystemStats {$/;"	s
+Write	misc.h	/^enum class AccessType {Read, Write, Prefetch};$/;"	m	class:AccessType
+accessType	tests/random.cpp	/^   AccessType accessType;$/;"	m	struct:AccessData	file:
+address	tests/random.cpp	/^   uint64_t address;$/;"	m	struct:AccessData	file:
+cache	system.h	/^   std::unique_ptr<Cache> cache;$/;"	m	class:SingleCacheSystem
+caches	system.h	/^   std::vector<std::unique_ptr<Cache>> caches;$/;"	m	class:MultiCacheSystem
+changeState	cache.cpp	/^void Cache::changeState(uint64_t set, uint64_t tag, CacheState state)$/;"	f	class:Cache
+checkCompulsory	system.cpp	/^void System::checkCompulsory(uint64_t line)$/;"	f	class:System
+checkRemoteStates	system.cpp	/^unsigned int MultiCacheSystem::checkRemoteStates(uint64_t set, $/;"	f	class:MultiCacheSystem
+checkWriteback	cache.cpp	/^bool Cache::checkWriteback(uint64_t set, uint64_t& tag) const$/;"	f	class:Cache
+countCompulsory	system.h	/^   bool countCompulsory;$/;"	m	class:System
+doAddrTrans	system.h	/^   bool doAddrTrans;$/;"	m	class:System
+evictTraffic	system.cpp	/^void MultiCacheSystem::evictTraffic(uint64_t set, $/;"	f	class:MultiCacheSystem
+findTag	cache.cpp	/^CacheState Cache::findTag(uint64_t set, uint64_t tag) const$/;"	f	class:Cache
+insertLine	cache.cpp	/^void Cache::insertLine(uint64_t set, uint64_t tag, CacheState state)$/;"	f	class:Cache
+isLocal	system.cpp	/^bool MultiCacheSystem::isLocal(uint64_t address, unsigned int local)$/;"	f	class:MultiCacheSystem
+lineMask	system.h	/^   uint64_t lineMask;$/;"	m	class:System
+main	main.cpp	/^int main()$/;"	f
+main	tests/random.cpp	/^int main(int argc, char* argv[]) {$/;"	f
+maxSetSize	cache.h	/^   unsigned int maxSetSize;$/;"	m	class:Cache
+memAccess	system.cpp	/^void MultiCacheSystem::memAccess(uint64_t address, AccessType accessType, $/;"	f	class:MultiCacheSystem
+memAccess	system.cpp	/^void SingleCacheSystem::memAccess(uint64_t address, AccessType accessType, unsigned int tid)$/;"	f	class:SingleCacheSystem
+operator <	misc.h	/^   bool operator<(const CacheLine& rhs) const$/;"	f	struct:CacheLine
+operator ==	misc.h	/^   bool operator==(const CacheLine& rhs) const$/;"	f	struct:CacheLine
+override	prefetch.h	/^   int prefetchHit(uint64_t address, unsigned int tid, System& sys) override;$/;"	m	class:AdjPrefetch
+override	prefetch.h	/^   int prefetchHit(uint64_t address, unsigned int tid, System& sys) override;$/;"	m	class:SeqPrefetch
+override	prefetch.h	/^   int prefetchMiss(uint64_t address, unsigned int tid, System& sys) override;$/;"	m	class:AdjPrefetch
+override	prefetch.h	/^   int prefetchMiss(uint64_t address, unsigned int tid, System& sys) override;$/;"	m	class:SeqPrefetch
+override	system.h	/^   void memAccess(uint64_t address, AccessType type, unsigned int tid) override;$/;"	m	class:MultiCacheSystem
+override	system.h	/^   void memAccess(uint64_t address, AccessType type, unsigned int tid) override;$/;"	m	class:SingleCacheSystem
+pageMask	misc.h	/^constexpr uint64_t pageMask = 0xFFFFFFFFFFE00000;$/;"	v
+pageMask	misc.h	/^constexpr uint64_t pageMask = 0xFFFFFFFFFFFFF000;$/;"	v
+pageShift	misc.h	/^constexpr uint32_t pageShift = 12;$/;"	v
+pageShift	misc.h	/^constexpr uint32_t pageShift = 21;$/;"	v
+pageToDomain	system.h	/^   std::unordered_map<uint64_t, unsigned int> pageToDomain;$/;"	m	class:MultiCacheSystem
+prefetchHit	prefetch.cpp	/^int AdjPrefetch::prefetchHit(uint64_t address, unsigned int tid, System& sys)$/;"	f	class:AdjPrefetch
+prefetchHit	prefetch.cpp	/^int SeqPrefetch::prefetchHit(uint64_t address, unsigned int tid, System& sys)$/;"	f	class:SeqPrefetch
+prefetchMiss	prefetch.cpp	/^int AdjPrefetch::prefetchMiss(uint64_t address, unsigned int tid, System& sys)$/;"	f	class:AdjPrefetch
+prefetchMiss	prefetch.cpp	/^int SeqPrefetch::prefetchMiss(uint64_t address, unsigned int tid, System& sys)$/;"	f	class:SeqPrefetch
+prefetchNum	prefetch.h	/^   static constexpr unsigned int prefetchNum = 3;$/;"	m	class:SeqPrefetch
+prefetcher	system.h	/^   std::unique_ptr<Prefetch> prefetcher;$/;"	m	class:System
+processMOESI	system.cpp	/^CacheState MultiCacheSystem::processMOESI(uint64_t set,$/;"	f	class:MultiCacheSystem
+seenLines	system.h	/^   std::unordered_set<uint64_t> seenLines;$/;"	m	class:System
+setMask	system.h	/^   uint64_t setMask;$/;"	m	class:System
+setRemoteStates	system.cpp	/^void MultiCacheSystem::setRemoteStates(uint64_t set, $/;"	f	class:MultiCacheSystem
+setShift	system.h	/^   uint32_t setShift;$/;"	m	class:System
+sets	cache.h	/^   std::vector<std::deque<CacheLine>> sets;$/;"	m	class:Cache
+stats	system.h	/^   SystemStats stats;$/;"	m	class:System
+tagMask	system.h	/^   uint64_t tagMask;$/;"	m	class:System
+tid	tests/random.cpp	/^   unsigned int tid;$/;"	m	struct:AccessData	file:
+tidToDomain	system.h	/^   std::vector<unsigned int>& tidToDomain;$/;"	m	class:MultiCacheSystem
+updateLRU	cache.cpp	/^void Cache::updateLRU(uint64_t set, uint64_t tag)$/;"	f	class:Cache
+updatePageToDomain	system.cpp	/^void MultiCacheSystem::updatePageToDomain(uint64_t address, $/;"	f	class:MultiCacheSystem
+usage	tests/random.cpp	/^void usage() {$/;"	f
+virtToPhys	system.cpp	/^uint64_t System::virtToPhys(uint64_t address)$/;"	f	class:System
+virtToPhysMap	system.h	/^   std::unordered_map<uint64_t, uint64_t> virtToPhysMap;$/;"	m	class:System
